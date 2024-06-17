@@ -40,6 +40,9 @@
 
     <!-- Stylesheets -->
     <!-- Dashmix framework -->
+    <link
+      rel="stylesheet"
+      href="assets/js/plugins/select2/css/select2.min.css" />
     <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css" />
 
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
@@ -339,114 +342,157 @@
       <main id="main-container">
         <!-- Page Content -->
         <!-- <div class="content"> -->
-          <!-- Hero -->
-          <div class="bg-body-light">
-            <div class="content content-full">
-              <div
-                class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-                <h1 class="flex-grow-1 fs-3 fw-semibold my-2 my-sm-3">
-                  New List
-                </h1>
-                <nav
-                  class="flex-shrink-0 my-2 my-sm-0 ms-sm-3"
-                  aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">Pages</li>
-                    <li class="breadcrumb-item">Blog</li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                      New
-                    </li>
-                  </ol>
-                </nav>
-              </div>
+        <!-- Hero -->
+        <div class="bg-body-light">
+          <div class="content content-full">
+            <div
+              class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
+              <h1 class="flex-grow-1 fs-3 fw-semibold my-2 my-sm-3">
+                New List
+              </h1>
+              <nav
+                class="flex-shrink-0 my-2 my-sm-0 ms-sm-3"
+                aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">Pages</li>
+                  <li class="breadcrumb-item">Blog</li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    New
+                  </li>
+                </ol>
+              </nav>
             </div>
           </div>
-          <!-- END Hero -->
+        </div>
+        <!-- END Hero -->
 
-          <!-- Page Content -->
-          <div class="content content-full">
-            <!-- New Post -->
-            <form
-              action="be_pages_blog_post_add.html"
-              method="POST"
-              enctype="multipart/form-data"
-              onsubmit="return false;">
-              <div class="block">
-                <div class="block-header block-header-default">
-                  <a
-                    class="btn btn-alt-secondary"
-                    href="be_pages_blog_post_manage.html">
-                    <i class="fa fa-arrow-left me-1"></i>
-                    Manage Lists
-                  </a>
-                  <div class="block-options">
-                    <div class="form-check form-switch">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="dm-post-add-active"
-                        name="dm-post-add-active" />
-                      <label class="form-check-label" for="dm-post-add-active">
-                        Set active
+        <!-- Page Content -->
+        <div class="content content-full">
+          <!-- New Post -->
+          <form
+            class="js-validation"
+            action="be_pages_blog_post_add.html"
+            method="POST"
+            enctype="multipart/form-data"
+            onsubmit="return false;">
+            <div class="block">
+              <div class="block-header block-header-default">
+                <a
+                  class="btn btn-alt-secondary"
+                  href="be_pages_blog_post_manage.html">
+                  <i class="fa fa-arrow-left me-1"></i>
+                  Manage Lists
+                </a>
+                <div class="block-options">
+                  <div class="form-check form-switch">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="dm-post-add-active"
+                      name="dm-post-add-active" />
+                    <label class="form-check-label" for="dm-post-add-active">
+                      Set active
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="block-content">
+                <div class="row justify-content-center push">
+                  <div class="col-md-10">
+                    <div class="mb-4">
+                      <label class="form-label" for="dm-post-add-title">
+                        Title
                       </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="dm-post-add-title"
+                        name="dm-post-add-title"
+                        placeholder="Enter a title.." />
                     </div>
-                  </div>
-                </div>
-                <div class="block-content">
-                  <div class="row justify-content-center push">
-                    <div class="col-md-10">
-                      <div class="mb-4">
-                        <label class="form-label" for="dm-post-add-title">
-                          Title
-                        </label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="dm-post-add-title"
-                          name="dm-post-add-title"
-                          placeholder="Enter a title.." />
-                      </div>
-                     
-                      <div class="mb-4">
-                        <label class="form-label" for="example-select">Picked Elements</label>
-                        <select class="form-select" id="example-select" name="example-select">
-                          <option selected>Open this select menu</option>
-                          <option value="1">Option #1</option>
-                          <option value="2">Option #2</option>
-                          <option value="3">Option #3</option>
-                          <option value="4">Option #4</option>
-                          <option value="5">Option #5</option>
-                          <option value="6">Option #6</option>
-                          <option value="7">Option #7</option>
-                          <option value="8">Option #8</option>
-                          <option value="9">Option #9</option>
-                          <option value="10">Option #10</option>
-                        </select>
-                      </div>
 
-                      <!--  -->
-                      <p>From Here i will Put my Own Widgets</p>
-                      <br>
-
+                    <div class="mb-4">
+                      <label class="form-label" for="example-select">
+                        Picked Elements
+                      </label>
+                      <select
+                        class="form-select"
+                        id="example-select"
+                        name="example-select">
+                        <option selected>Open this select menu</option>
+                        <option value="1">Daily</option>
+                        <option value="2">Weekly</option>
+                        <option value="3">Monthly</option>
+                      </select>
                     </div>
-                  </div>
-                </div>
-                <div class="block-content bg-body-light">
-                  <div class="row justify-content-center push">
-                    <div class="col-md-10">
-                      <button type="submit" class="btn btn-alt-primary">
-                        <i class="fa fa-fw fa-check opacity-50 me-1"></i>
-                        Create Post
-                      </button>
+                    <!--  -->
+                    <hr />
+                    <div class="mb-4">
+                      <label class="form-label" for="val-select2-multiple">
+                        Select2 Days
+                        <span class="text-danger">*</span>
+                      </label>
+                      <select
+                        class="js-select2 form-select"
+                        id="val-select2-multiple"
+                        name="val-select2-multiple"
+                        style="width: 100%"
+                        data-placeholder="Choose at least two.."
+                        multiple>
+                        <option></option>
+                        <!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                        <option value="html">Saturday</option>
+                        <option value="css">Sunday</option>
+                        <option value="javascript">Monday</option>
+                        <option value="angular">Tuesday</option>
+                        <option value="react">Wednesday</option>
+                        <option value="vuejs">Thursday</option>
+                        <option value="ruby">Friday</option>
+                      </select>
+                    </div>
+                    <hr />
+                    <div class="mb-4">
+                      <label class="form-label" for="example-select-multiple">
+                        Select Dates
+                      </label>
+                      <select
+                        class="form-select"
+                        id="example-select-multiple"
+                        name="example-select-multiple"
+                        size="10"
+                        multiple>
+                        <option selected>Open this select menu</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
                     </div>
                   </div>
                 </div>
               </div>
-            </form>
-            <!-- END New Post -->
-          </div>
-          <!-- END Page Content -->
+              <div class="block-content bg-body-light">
+                <div class="row justify-content-center push">
+                  <div class="col-md-10">
+                    <button type="submit" class="btn btn-alt-primary">
+                      <i class="fa fa-fw fa-check opacity-50 me-1"></i>
+                      Create Post
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- END New Post -->
+        </div>
+        <!-- END Page Content -->
         <!-- </div> -->
         <!-- END Page Content -->
       </main>
@@ -486,5 +532,21 @@
     <!-- END Page Container -->
 
     <script src="assets/js/dashmix.app.min.js"></script>
+
+    <!-- jQuery (required for Select2 + jQuery Validation plugins) -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/select2/js/select2.full.min.js"></script>
+    <script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="assets/js/plugins/jquery-validation/additional-methods.js"></script>
+
+    <!-- Page JS Helpers (Select2 plugin) -->
+    <script>
+      Dashmix.helpersOnLoad(["jq-select2"]);
+    </script>
+
+    <!-- Page JS Code -->
+    <script src="assets/js/pages/be_forms_validation.min.js"></script>
   </body>
 </html>
