@@ -1,0 +1,19 @@
+1-Create List [ Including all Specs ]
+    - Edit 
+2-Create Task/Edit [ In View List Items ] 
+
+3- Table Showing Your Tasks [ Done Nearly ]
+==========================
+
+What do you Really Need  ?
+    - 
+
+======================
+1- User install the app and Get an Intro ;
+2- After intro the User Has the @Task Table Empty (For what tasks he has today )
+3- The User Can Create Multiple Lists [Each List Has Criteria ]
+4- Once List is Created , User Can Enter the Tasks 
+
+
+=============UI============
+In daily dose put age timer
