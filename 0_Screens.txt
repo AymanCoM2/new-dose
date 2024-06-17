@@ -17,3 +17,22 @@ What do you Really Need  ?
 
 =============UI============
 In daily dose put age timer
+
+
+
+Needed things 'Actions' For the Tasks : 
+1- Remove [ Delete ] From the List itself 
+1-  Activate/Deactivate  From the List itself 
+1- Edit Content [ From the list itself ]
+
+
+2- Remove "the Default One"  is ok 
+3- Postpone "Instead On Starred "
+4- 
+=================
+Solution is Not Edit the JS and Compile it , Rather you will add In the HTML 
+Content "Using Loops Or whatever" To Generate the html with the new Extra Buttons 
++ The new actions 
+================
+For Now Only One Type Of Lists [ Normal Recurring ]
+And Update/Edit  Tasks
